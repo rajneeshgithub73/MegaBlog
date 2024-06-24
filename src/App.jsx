@@ -26,13 +26,17 @@ function App() {
   },[])
   
   return !loading ? (
-    <div>
-      <div>
-        <Header/>
+    <div className='w-full h-full'>
+      <div className='bg-slate-300 flex-col justify-between'>
+        <div>
+          <Header/>
+        </div>
         <main>
-          Todo: <Outlet/>
+          <Outlet/>
         </main>
-        <Footer/>
+        <div>
+          <Footer/>
+        </div>
       </div>
     </div>
   ) : null
